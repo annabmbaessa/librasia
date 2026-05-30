@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tradutor de fala para Libras em tempo real com avatar animado">
+  <title>MY LIBRAS — Tradutor de Libras com Avatar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Help -->
+  <button id="helpBtn">?</button>
+  <div id="helpModal">
+    <div id="helpContent">
+      <h2>Como utilizar a plataforma</h2>
+      <p>
+        1. Clique no microfone dourado ou digite uma frase abaixo.<br><br>
+        2. Fale normalmente — o avatar traduzirá para Libras em tempo real.<br><br>
+        3. Palavras conhecidas serão sinalizadas; desconhecidas serão soletradas (datilologia).<br><br>
+        4. Clique em "Ver sinais disponíveis" para testar sinais individuais.<br><br>
+        5. Recomenda-se Google Chrome e fala clara e pausada.
+      </p>
+      <button id="closeHelp">Fechar</button>
+    </div>
+  </div>
+  <!-- Title -->
+  <h1>MY L<span class="gold">I</span>BR<span class="gold">A</span>S</h1>
+  <p class="sub">Tradutor de Fala para Libras com Avatar</p>
+  <!-- Avatar -->
+  <div class="avatar-card" id="avatarCard">
+    <canvas id="avatar"></canvas>
+    <div id="signLabel">&nbsp;</div>
+  </div>
+  <!-- Text input -->
+  <div class="input-row">
+    <input type="text" id="textInput" placeholder="Digite uma frase..." autocomplete="off">
+    <button id="sendBtn">Traduzir</button>
+  </div>
+  <!-- Mic -->
+  <button id="micBtn">
+    <div class="mic-circle" id="micCircle">
+      <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 0014 0h-2zm-4 8.93A8 8 0 0112 20v2h-2v-2a8 8 0 01-1-.07V22h2v-2.07z"/></svg>
+    </div>
+  </button>
+  <div id="status">Toque no microfone para começar</div>
+  <!-- Signs panel -->
+  <div id="signsPanel">
+    <button id="signsToggle">▼ Ver sinais disponíveis</button>
+    <div id="signsList"></div>
+  </div>
+  <!-- Legenda -->
+  <div id="legenda"></div>
+  <!-- Three.js import map -->
+  <script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <!-- App (ES module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
