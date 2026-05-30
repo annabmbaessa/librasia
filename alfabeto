@@ -1,0 +1,31 @@
+/** Fingerspelling – Datilologia (A–Z) */
+import { makePose } from './poses.js';
+const FS = { rua: 0.85, rfa: -3.1, rha: 0 };
+export const ALPHABET = {
+  A: makePose({ ...FS, rf: [.2, 1, 1, 1, 1] }),
+  B: makePose({ ...FS, rf: [1, 0, 0, 0, 0] }),
+  C: makePose({ ...FS, rf: [.3, .4, .4, .4, .4] }),
+  D: makePose({ ...FS, rf: [.7, 0, 1, 1, 1] }),
+  E: makePose({ ...FS, rf: [.8, .7, .7, .7, .7] }),
+  F: makePose({ ...FS, rf: [.5, .5, 0, 0, 0] }),
+  G: makePose({ ...FS, rha: .3, rf: [.5, 0, 1, 1, 1] }),
+  H: makePose({ ...FS, rha: .3, rf: [.5, 0, 0, 1, 1] }),
+  I: makePose({ ...FS, rf: [1, 1, 1, 1, 0] }),
+  J: makePose({ ...FS, rha: -.4, rf: [1, 1, 1, 1, 0] }),
+  K: makePose({ ...FS, rf: [.3, 0, 0, 1, 1] }),
+  L: makePose({ ...FS, rf: [0, 0, 1, 1, 1] }),
+  M: makePose({ ...FS, rf: [1, .75, .75, .75, 1] }),
+  N: makePose({ ...FS, rf: [1, .75, .75, 1, 1] }),
+  O: makePose({ ...FS, rf: [.5, .6, .6, .6, .6] }),
+  P: makePose({ ...FS, rua: .6, rfa: -2.4, rf: [.3, 0, 0, 1, 1] }),
+  Q: makePose({ ...FS, rua: .6, rfa: -2.4, rf: [.5, 0, 1, 1, 1] }),
+  R: makePose({ ...FS, rf: [1, 0, 0, 1, 1] }),
+  S: makePose({ ...FS, rf: [.7, 1, 1, 1, 1] }),
+  T: makePose({ ...FS, rf: [.3, 1, 1, 1, 1] }),
+  U: makePose({ ...FS, rf: [1, 0, 0, 1, 1] }),
+  V: makePose({ ...FS, rf: [1, 0, 0, 1, 1] }),
+  W: makePose({ ...FS, rf: [1, 0, 0, 0, 1] }),
+  X: makePose({ ...FS, rf: [1, .45, 1, 1, 1] }),
+  Y: makePose({ ...FS, rf: [0, 1, 1, 1, 0] }),
+  Z: makePose({ ...FS, rf: [1, 0, 1, 1, 1] }),
+};
